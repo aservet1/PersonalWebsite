@@ -1,0 +1,340 @@
+<html>
+<head>
+    <title>Alejandro Servetto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link 
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous"
+    >
+
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+        integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript" language="JavaScript">        
+        function bustImage() {
+            var NUM_PROFILE_PICS = 1;//6
+            var EXT = ".jpg"
+            var num = 1 + Math.floor(Math.random() * NUM_PROFILE_PICS); 
+            document.write(
+                '<div class=\"col-8 col-sm-6 col-md-4 col-lg-3 pl-4 pt-4 pt-md-0\"><a onclick=\'changepic()\'><img src=\"profiles/profile_' 
+                + num + EXT 
+                + '\" itemprop=\"photo\" class=\"me float-left img-fluid\"  alt=\"image\"></a></div>'
+            );
+        }
+    </script>
+
+    <style>
+    .publogo { margin-right : 20px; }
+    .publication { padding-left : 10px; padding-top : 10px; margin-bottom : 10px; }
+    .publication strong a { color : #000; text-decoration    :none; }
+    .publication strong a:hover { text-decoration : underline; }
+    .publication .links a { margin-right : 15px; }
+    .press { display : inline-block; padding : 5px; height : 70px;}
+    .press a img { border : 3px solid #fff; border-radius : 5px; padding : 4px; }
+    .press a img:hover { border-color : #3366cc; }
+    .talk { display : block; padding : 0 15px;}
+    .talk a img { border : 3px solid #fff; border-radius : 5px; padding : 5px; }
+    .talk a img:hover { border-color : #3366cc; }
+    .external a { margin-right : 30px; }
+    ul{ list-style:none; padding:0; margin:0; }
+    a{ color: rgb(0, 114, 206); }
+    ul li { padding-bottom:6px; }
+    .nameplate {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .footer { background-color:rgb(240,240,240); }
+    .topbar { background-color:rgb(245,128,37); }
+    h3, h4 { color:#424242; }
+    .section-title { margin-top : 30px; }
+
+    h4 { margin-top: 30px; }
+
+    p{ text-align: justify; }
+
+    .papers-selected h4, .papers-selected h3 { display : none; }
+    .papers-selected .publication { display : none; }
+    .papers-selected .paperhi { display : flex; }
+
+    .content-indent {
+        margin-left: 20px;
+    }
+
+    .section-header {
+        color:#424242;
+        margin-top : 30px;
+    }
+
+    .subsection-header {
+        margin-top : 60px;
+    }
+
+    .proj-image {
+        margin-bottom : 10px;
+    }
+
+    #songwatermark {
+        margin-left: 35px;
+    }
+
+    #songonly {
+        margin-left: 60px;
+    }
+
+    #shadows-label {
+        text-align: center;
+    }
+
+    #resume {
+        margin-top: 10px;
+    }
+
+    .tools-used {
+        padding-bottom: 10px;
+    }
+
+    #updated {
+        font-size: 14px;
+    }
+
+    /* a {
+        color: #DC6E05
+    }*/
+
+    .toplink {
+        color: #000000;
+    }
+
+    .bottomlink {
+        color: #DC6E05;
+        /*color: #F58024;*/
+    }
+    </style>
+
+    <link rel="shortcut icon" href="/files/assets/images/favicon.ico" />
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-1592615-30', 'auto', 'webwwwall');
+        ga('webwwwall.send', 'pageview');
+    </script>
+</head>
+
+<body>
+    <div class="topbar">
+        <div class="container">
+            <div>
+                <div class="row mt-0">
+                    <script type="text/javascript" language="JavaScript">
+                        var NUM_PROFILE_PICS = 1;//6
+                        var EXT = ".jpg"
+                        function changepic(){
+                            console.log("Changepic")
+                            var num = 1 + Math.floor(Math.random() * NUM_PROFILE_PICS); 
+                            var s = "profiles/profile_" + num + EXT
+                            while (s === $(".me").attr("src")){
+                                num = 1 + Math.floor(Math.random() * NUM_PROFILE_PICS); 
+                                s = "profiles/profile_" + num + EXT
+                            }
+                            $(".me").attr("src",s);
+                        }
+                        bustImage();
+                    </script>
+                    <!--
+                        <div class="col-8 col-sm-6 col-md-4 col-lg-3 pl-4 pt-4 pt-md-0"><a onclick='changepic()'>
+                        <img src="profiles/profile_1.jpg"
+                        itemprop="photo"
+                        class="me float-left img-fluid"
+                        alt="image"></a></div>
+                    -->
+
+                    <div class="col-12 col-md-8    pl-4 py-4 py-md-1 nameplate">
+                        <h3>Alejandro Servetto</h3>
+                        <p class="my-0" style="line-height:1.2;">
+                            <small>(rising) </small>1st Year Ph.D. Candidate in Computer Science<br>
+                            <!--Department of Computer Science, -->School of Engineering<br>
+                            Princeton University<br>
+                            <br>
+                            Email: <u><a class="toplink" href="mailto:a.l.servetto@gmail.com">a.l.servetto@gmail.com</a></u><br>
+                            <div id="resume"><a class="toplink" href="resume.pdf" target="_blank"><u>Resume</u></a></div>
+                            <u><a class="toplink" href="https://www.linkedin.com/in/alejandro-servetto-373165187/" target="_blank"><div id="resume">LinkedIn</div></a></u>
+                        </p>        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div>
+            <div class="row">
+                <div class="col-lg-4 col-12 px-4 order-1">
+                    <h4>Contents</h4>
+                    <ul>
+                        <li><a class="bottomlink" href="#projects">Projects</a></li>
+                        <div class="content-indent">
+                        
+                            <li><a class="bottomlink" href="#deeplearning">Deep Learning</a></li>
+                            <div class="content-indent">
+                                <li><a class="bottomlink" href="#shadowfromshading">Shadow-From-Shading</a></li>
+                                <li><a class="bottomlink" href="#watermark">Audio Watermark Removal</a></li>
+                            </div>
+
+                            <li><a class="bottomlink" href="#robotics">Robotics and Graphics</a></li>
+                            <div class="content-indent">
+                                <li><a class="bottomlink" href="#walkingrobots">Walking Robots</a></li>
+                                <li><a class="bottomlink" href="#sabotage">Sa-BOT-age</a></li>
+                                <li><a class="bottomlink" href="#simplegl">SimpleGL</a></li>
+                            </div>
+                            
+                            <li><a class="bottomlink" href="#webprojects">Web Projects</a></li>
+                            <div class="content-indent">
+                                <li><a class="bottomlink" href="#lionscores">LionScores</a></li>
+                                <li><a class="bottomlink" href="#temptab">Temporary Tab</a></li>
+                            </div>
+                        
+                        </div>
+                        <li><a class="bottomlink" href="#work">Work Experience</a></li>
+                        <div class="content-indent">
+                            <li><a class="bottomlink" href="#amazon">Amazon Software Developer Engineer</a></li>
+                            <li><a class="bottomlink" href="#ta">Teaching Assistant</a></li>
+                        </div>
+                    </ul>
+                </div>
+
+                <div class="col-lg-8 order-0 col-12 px-4 papers-container papers-selected">
+
+                    <h3 class="paperhi section-title">About Me</h3>
+                    <p>
+                        I am in my senior year of my B.S. in Computer Science from Binghamton University, set to graduate in May 2021
+                    </p>
+
+                    <h3 class="paperhi paperhi-only section-title"><a name="work">Work Experience</a></h3> 
+                        <h5 class="paperhi section-header"><a name="deeplearning">Course Assistant (October 2020 - December 2020)</a></h5>  
+                        <img src="misc-img/binghamton-logo.png" class="floatLeft">
+                        <div class="publication media paperhi">
+                            <div class="media-body">
+                                <p>
+                                    I worked as a teaching assistant for a Computer Science Theory course, where I held weekly office hours, graded assignments,
+                                    and directed practice sessions for students. Through this opportunity, I gained experience in conveying complex information to others.
+                                </p>
+                            </div>
+
+                        </div>
+                        <h5 class="paperhi section-header"><a name="deeplearning">IBM Summer Intern (June 2020 - August 2020)</a></h5>
+                        <img src="misc-img/ibm-logo.png" class="floatLeft">
+                        <div class="publication media paperhi">
+                            <div class="media-body">
+                        
+                                    I internted at IBM for eight weeks in the Summer of 2020 (shortened from 12 weeks due to the COVID-19 pandemic) on the z/OS
+                                    Security team. I created a tool to automate the deletion of the Master Key Verification Pattern from a Cryptographic Key Dataset.
+                                    I developed and tested the tool on the z/OS Mainframe environment. I learned about the basics of cryptographic keys' funcitonality,
+                                    how they are stored, and how to identify relevant parts of their metadata section.
+                                    <br><br>
+                                    Upon early completion of the key deletion project, I spent the rest of the internship doing miscellaneous web development tasks
+                                    on a website meant to facilitate inter-employee communication. People on different teams would use the website to notify other teams
+                                    of proposed changes to shared projects, so the changes can be discussed and either approved or rejected. I had no prior web development experience
+                                    so my tasks began with small changes like adding text boxes or reformatting. As I got more comfortable, I took on more complex tasks, such
+                                    as making the website compatible with a screen reader for blind users, and making a submittable form that sends email notifications to other teams.
+                                    I submitted by work via Github. (go back and edit the wording of all of this)
+                                </p>
+                            </div>
+                        </div>
+                        <h5 class="paperhi section-header"><a name="deeplearning">Math and Science Tutor (September 2019 - May 2020)</a></h5>
+                        <img src="misc-img/tc3-logo.jpg" class="floatLeft">
+                        <div class="publication media paperhi">
+                            <div class="media-body">
+                                I spent two semesters tutoring mainly Math courses, although Chemistry, Biology and Computer Science topics arose from time
+                                to time. The tutoring setup was a section in the library where people would work and signal for help, and then the tutor with
+                                the most relevant experience would come and assist the student. The tutoring was a good team activity of my coworkers and I
+                                coordinating who to help and when, so our skills were spread the most efficiently.                                
+                            </div>
+                        </div>
+
+
+
+                    <h3 class="paperhi paperhi-only section-title"><a name="projects">Projects</a></h3>
+                    <h5 class="paperhi section-header"><a name="deeplearning">Energy Monitoring Web App</a></h5>
+                        <div class="publication media paperhi">
+                            <div id="shadows-label" class="col-sm-5">
+                                <a href="misc-img/todo-webapp.png"><img src="misc-img/todo-webapp.png" class="publogo img-fluid float-left rounded g proj-image"></a>
+                            </div>
+                            <hr/>
+                            <div class="media-body">
+                                <div class="tools-used">
+                                    <i><u>Tools Used:</u> Java, C, Java Native Interface React.js, Something Something about HTTP</i>
+                                </div>
+                                    <u>Objective:</u> Create a way of remotely querying a machine's energy consumption via a web app. 
+                                    <br><br>
+                                    <u>Method:</u> I already had an energy querying Java library that I had worked on for my undergraduate research project.
+                                        I then built a Java HTTP server that takes GET requests and returns the results in JSON format. The server interacts with
+                                        my React.js frontend, a Single Page Application which can render different metrics for querying the energy of the remote machine.
+                                        It sends an Axios GET request to the backend, picks up the JSON energy readings, and displays them to the user.
+                                        
+                                        This is a work in progress, so there are currently only two working features: A snapshot of the system's energy counters
+                                        (an accumulating total of how many joules the machine consumed) and how much energy the machine consumes in the next X milliseconds.
+                                        I am working on other features, like longer term average energy usage over time or computer generated graphs of energy activity.
+                                    <br><br>
+                                    <u>Additional Info:</u> N/A currently
+                                    <br><br>
+                                    <u>Github:</u> <a href='https://github.com/aservet1/httpRAPL'>https://github.com/aservet1/httpRAPL</a>
+                                </p>
+                            </div>
+                        </div>                  
+
+                        <h5 class="paperhi section-header"><a name="robotics">Unix Shell Todo List Application</a></h5>
+                        <div class="publication media paperhi subsection-header">
+                            <div class="col-sm-5">
+                                <a href="cmdtodo/menu-img.png"><img src="cmdtodo/menu-img.png" class="publogo img-fluid float-left rounded g proj-image"></a>
+                                <a href="cmdtodo/view-sample.png"><img src="cmdtodo/view-sample.png" class="publogo img-fluid float-left rounded g proj-image"></a>
+                                <a href="cmdtodo/cmdtodo-usage.png"><img src="cmdtodo/cmdtodo-usage.png" class="publogo img-fluid float-left rounded g proj-image"></a>
+                            </div>
+                            <div class="media-body">
+                                <div class="tools-used">
+                                    <i><u>Tools Used:</u> Shell Scripting, Unix tools (sed, grep, etc), POSIX Regular Expressions</i>
+                                </div>
+                                    <u>Objective:</u> To make a command line todo list manager. I had too many todo.txt files for different topics and it got cumbersome
+                                    to manage and view them all over my file system so I developed some scripts to make it easier to view them, and it evolved into
+                                    a full application. This project helped me learn about the Shell as a newbie Linux user.
+                                    <br><br>
+                                    <u>Method:</u> I have a list of text files stored in one of this project's folders and a collection of Bash scripts used
+                                    to do different operations on them. One master script, which I can run from any directory in the command line, reads the first
+                                    command line argument and then passes the other arguments another script that facilitates the view, create, delete, and update
+                                    operations allowed. The tool uses POSIX regular expressions to parse command line arguments and Unix tools like sed and grep when
+                                    doing slightly more advanced viewing operations, such as viewing all lines with a list marked with a "priority" tag. 
+                                    <br><br>
+                                <u>Additional Info:</u> n/a
+                                <br><br>
+                                <u>Github:</u> <a href='https://github.com/aservet1/cmdtodo'>https://github.com/aservet1/cmdtodo</a>
+                                </p>
+                            </div>
+                        </div>
+
+             </div>   
+         </div>
+     </div>
+ </div>
+ <div id="updated" align="right">Last updated on 6/2/19</div>
+</div>
+
+
+<script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+    integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl"
+    crossorigin="anonymous"
+/>
+
+</body>
+</html>
